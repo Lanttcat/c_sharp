@@ -1,7 +1,6 @@
-using System;
 using Xunit;
 
-namespace c_sharp
+namespace c_sharp.test
 {
     public class StringLanFact
     {
@@ -10,6 +9,13 @@ namespace c_sharp
         {
             var stringLan = new StringLan();
             Assert.Equal("Hello, Ingram", stringLan.GetFormatString("Ingram"));
+        }
+
+        [Fact]
+        public void should_get_repeat_char_by_new_string()
+        {
+            var stringLan = new StringLan();
+            Assert.Equal("aaaaaaaaaa", stringLan.CreateStringByConstructRepeat('a'));
         }
 
     }

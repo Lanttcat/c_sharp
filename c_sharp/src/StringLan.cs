@@ -6,6 +6,11 @@ namespace c_sharp
         {
             return $"Hello, {name}";
         }
+
+        public string CreateStringByConstructRepeat(char testChar)
+        {
+            return new string(testChar, 10);
+        }
         
     }
 }

@@ -1,7 +1,6 @@
-using System;
 using Xunit;
 
-namespace c_sharp
+namespace c_sharp.test
 {
     public class KeywordsFact
     {
