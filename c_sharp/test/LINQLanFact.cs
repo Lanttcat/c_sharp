@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace c_sharp.test
@@ -20,6 +22,19 @@ namespace c_sharp.test
             string[] expectValue = { "eeeee", "bbbb", "aaa", "ccc", "dd"};
             Assert.Equal(expectValue, linqLan.OrderStringByLength(todo));
         }
-        
+
+        [Fact]
+        public void should_exe_twice_when_only_use_select_in_linq()
+        {
+            var numbers = new List<int> {1, 2, 3};
+
+            var selectNumber = numbers.Where(number => number > 2);
+            
+            Assert.Equal(1, selectNumber.Count());
+            
+            numbers.Add(4);
+            Assert.Equal(2, selectNumber.Count());
+        }
+
     }
 }
